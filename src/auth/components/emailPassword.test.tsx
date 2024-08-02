@@ -4,6 +4,12 @@ import EmailPasswordLogin from "./emailPassword";
 
 describe("<EmailPasswordLogin />", () => {
     it("should shows email,password input field and a login btn", () => {
-        
+        render(<EmailPasswordLogin />)
+           
+        const emailInput = screen.getByRole('textbox', {
+            name: /email/i
+        });
+
+        expect(emailInput).toBeInTheDocument()
      })
 })
