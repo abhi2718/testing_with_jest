@@ -1,10 +1,13 @@
 import React, { memo } from "react";
 
-function EmailPasswordLogin() {
+interface IEmailPasswordLogin {
+  hanldeLoginApi: (payload: { email: string; password: string }) => void;
+}
+function EmailPasswordLogin(props: IEmailPasswordLogin) {
+  const { hanldeLoginApi } = props;
   return (
     <div>
-          <h4>Email Password Login</h4>
-         
+      <h4>Email Password Login</h4>
     </div>
   );
 }
