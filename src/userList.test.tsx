@@ -20,10 +20,12 @@ const renderComponent = () => {
   };
 };
 
-it("should show one row for each user", () => {
-  renderComponent();
-});
-
-it("should show name and email of each user", () => {
-  const { users } = renderComponent();
-});
+describe('<UserList />', () => {
+  it("should show one row for each user", () => {
+    renderComponent();
+  });
+  
+  it("should show name and email of each user", () => {
+    const { users } = renderComponent();
+  });
+})

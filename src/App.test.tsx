@@ -1,7 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
+const name = "Abhishek Singh";
+const email = "abhiwebdev2718@gmail.com";
+describe("<App />", () => {
+  it("it should show created user in table", () => {
+    render(<App />);
+  });
 });
