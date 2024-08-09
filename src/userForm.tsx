@@ -7,6 +7,9 @@ interface UserFormProps {
 function UserForm(props: UserFormProps) {
   const [userDetails, setUserDetails] = useState({ name: "", email: "" });
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    // if (!userDetails.name.length) {
+    //   new Error('Name is required!')
+    // }
     event.preventDefault();
     props.addUser(userDetails);
   };
